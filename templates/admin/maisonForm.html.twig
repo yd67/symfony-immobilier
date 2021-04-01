@@ -1,0 +1,67 @@
+
+ {% extends "baseAdmin.html.twig" %} 
+
+   {% block title %} maison- create {% endblock title %}
+
+
+{% block body %}
+     <h2> Ajouter des donees</h2>
+
+     {{ form_start(maisonForm) }}
+
+          <div class="row">
+               
+               <div class="col-6">
+                    {{form_label(maisonForm.title) }}
+                    {{form_widget(maisonForm.title) }}
+               </div>
+               <div class="col-6">
+                    {{form_label(maisonForm.description) }}
+                    {{form_widget(maisonForm.description) }}
+               </div>
+
+               <div class="col-3">
+                    {{form_label(maisonForm.rooms) }}
+                    {{form_widget(maisonForm.rooms) }}
+               </div>
+
+               <div class="col-3">
+                    {{form_label(maisonForm.bedrooms) }}
+                    {{form_widget(maisonForm.bedrooms) }}
+               </div>
+
+               <div class="col-3">
+                    {{form_label(maisonForm.price)}}
+                    {{form_widget(maisonForm.price)}}
+               </div>
+
+               <div class="col-3">
+                    {{ form_label(maisonForm.surface)}}
+                    {{ form_widget(maisonForm.surface)}}
+               </div>
+
+               <div class="col-3">
+                    {{ form_label(maisonForm.img1) }}
+                    {{ form_widget(maisonForm.img1) }}
+               </div> 
+
+               <div class="col-3">
+                    {{ form_label(maisonForm.img2) }}
+                    {{ form_widget(maisonForm.img2) }}
+               </div>
+
+               <div class="col-3">
+                    {{ form_label(maisonForm.img3) }}
+                    {{ form_widget(maisonForm.img3) }}
+               </div>
+
+               <div class="col-3">
+               
+                    {{ form_widget(maisonForm.valider) }}
+               </div>
+
+          </div>
+
+     {{ form_end(maisonForm) }}
+
+{% endblock %}

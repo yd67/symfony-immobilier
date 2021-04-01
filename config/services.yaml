@@ -4,6 +4,11 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    dossier_photos_maisons: '%kernel.project_dir%/public/img/maison'
+    app.copyright: 'Copyright &copy; 2021 - David HURTREL'
+    app.langues: 'fr, en, nl'
+
+  #  app.copyright: 'Copyright 2021 - SUBLIMMO' 
 
 services:
     # default configuration for services in *this* file

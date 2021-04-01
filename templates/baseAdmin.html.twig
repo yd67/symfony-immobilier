@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% trans %}Immobilier{% endtrans %}- {% block title %}{% endblock %}</title>
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        <link rel="stylesheet" href=" {{asset('css/styleAdmin.css')}} ">
+{% block stylesheets %} {% endblock %}
+    
+</head>
+
+    <body>
+
+        <header class="container-fluid bg-dark p-3 text-center text-light ">
+            <h2>SUB'IMMO - {% trans %} espace administrateur {% endtrans %} </h2>
+            <p> {% trans %} Bienvenue sur l'espace administrateur de Subl'IMMO{% endtrans %}</p>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-2 bg-secondary ">
+                    <ul>
+                        <li><i class="fas fa-laptop"></i><a href=" {{path('admin')}} "> {% trans %} Accueil Admin {% endtrans %} </a></li>
+                        <li><i class="fas fa-home"></i><a href=" {{path('admin_maisons')}} "> {% trans %}maison{% endtrans %}</a></li>
+                        {% if is_granted('ROLE_SUPER_ADMIN') %} 
+                        <li><i class="fas fa-users"></i><a href=" {{path('admin_users')}} "> {% trans %}Propietaire{% endtrans %}</a></li>
+                       {% endif %}
+                        <li><i class="fas fa-user-times"></i><a href="{{ path('app_logout') }} ">  {% trans %}déconnexion{% endtrans %} </a></li>
+                        <li><i class="fas fa-door-open"></i><a href=" {{path('home')}} "> {% trans %}Quitter{% endtrans %}</a></li>
+                    </ul>
+                </nav>
+                <div class="col-10 p-4">
+                    
+                    {% for label, messages in app.flashes(['success','danger']) %}
+                       {% for message in messages %}
+
+                       <div class="flash-{{label}} bg-{{label}} p-3">
+                            {{ message }}
+
+                       </div>
+                       {% endfor %}
+                    {% endfor %}
+                    {% block body %}
+                        {# les informations et formulaires seront ici #}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        
+        <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.min.js">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js">
+       
+        
+        <footer class="container-fluid bg-dark text-center text-light ">
+            <p> Copyright 2021 - DARIUS Yvens </p>
+        </footer>
+
+ {% block javascripts %}{% endblock %}
+    </body>
+</html>

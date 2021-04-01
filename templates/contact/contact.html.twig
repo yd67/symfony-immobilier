@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+  
+
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Contact</h1>
+                </div>
+            </div>
+        </div>
+    
+
+    <main>
+
+        <div class="col-4 offset-4">
+            {{ form_start(contactForm) }}
+            {{ form_end(contactForm) }}
+            
+        </div>
+    </main>
+
+{% endblock %}

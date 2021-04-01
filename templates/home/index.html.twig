@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+
+{% block body %}
+
+
+<header id="header">
+  <h1 class="text-center">SUBL'IMMO</h1>
+ 
+  <h2 class="text-center">Agence Immobiliere 100% en ligne </h2>
+
+  
+       <div class=" row  justify-content-end  menu p-3 ">
+             
+               <a class=" m-2 "  href=" {{path('home')}} "> <i class="fas fa-home "></i></a>
+               <a class=" m-2 " href="{{path('contact')}}">Contact <i class="fas fa-envelope"></i></a>
+
+
+
+          {% if is_granted('ROLE_USER') %}
+              <a class="m-2 " href="  {{path('app_logout')}} ">  se deconnecter <i class="fas fa-sign-out-alt "></i></a>
+          {% else %}
+                  <a class="m-2" href="  {{path('app_login')}} "> mon compte<i class="fas fa-user  "></i></a>
+          {% endif %}
+    
+   </div>
+
+</header>
+
+  <div class="container-fluid p-8">
+    <div class="col-12">
+
+      <h2>Les logements </h2>
+
+    </div>
+
+
+
+  <div class="row">
+
+  
+  
+     {% for maison in maisons  %}
+
+    {#   {% if loop.index <= 6 %} #}
+     <div class="col-4 p-3">
+
+     <div class="card" >
+      <img src="{{ asset('img/maison/' ~ maison.img1) }} " class="card-img-top img-fluid h-100" alt="..." id="maison">
+      <div class="card-body">
+        <h5 class="card-title">{{maison.title}}
+          <br>
+         <small> {{maison.rooms}} pieces</small>
+         <small> surface: {{maison.surface}} m²</small>
+         
+        </h5> 
+      </div>
+      <ul class="list-group list-group-flush">
+       <li class="list-group-item"> prix: {{ maison.price|number_format(2,',', '') }} € </li>
+         
+      </ul>
+
+      <div class="card-body">
+       
+        <a href="#" class="btn btn-primary">Voir plus</a>
+      </div>
+    </div>
+</div>
+    {#   {% endif %}  #}
+    {% endfor %}
+
+     
+  </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+
+   <H2>la pages user</H2>
+
+   <table class="table">
+       <thead>
+           <tr>
+               <th>N°</th>
+               <th>Email</th>
+               <th>role</th>
+               <th>Action</th>
+           </tr>
+       </thead>
+       {% for user in users %}
+       <body>
+           <tr>
+               <td> {{loop.index}} </td>
+               <td> {{user.email}} </td>
+               <td> {{user.roles|join(' + ')|lower}}</td>
+
+               <td class="">
+
+                <a href=" {{ path('user_update', {'id':user.id} )}} "> <i class="fas fa-pen-square"></i> </a>  
+                <a href=" {{ path('user_delete', {'id':user.id} ) }} "> <i class=" fas fa-trash-alt"></i> </a>  </td>
+       
+
+               </td>
+           {#  {{  }}   #}  
+
+
+               
+           </tr>
+           
+       </body>
+       {% endfor %}
+   </table>
+
+   <div class="text-right">
+       <a class="btn btn-outline-dark" href=" {{ path('user_create')}}">ajouter un utilisateur</a>
+   </div>
+
+
+{% endblock %}

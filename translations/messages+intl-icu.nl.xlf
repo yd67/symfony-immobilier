@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="nl" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>__Accueil</target>
+      </trans-unit>
+      <trans-unit id="G8sikn5" resname="Bienvenue sur l'espace administrateur du site subl'Immo">
+        <source>Bienvenue sur l'espace administrateur du site subl'Immo</source>
+        <target>__Bienvenue sur l'espace administrateur du site subl'Immo</target>
+      </trans-unit>
+      <trans-unit id="5jJ5m6t" resname="pour commmencer , merci de selectionner un lien dans le">
+        <source>pour commmencer , merci de selectionner un lien dans le</source>
+        <target>__pour commmencer , merci de selectionner un lien dans le</target>
+      </trans-unit>
+      <trans-unit id="aG4.IcO" resname="Maison">
+        <source>Maison</source>
+        <target>__Maison</target>
+      </trans-unit>
+      <trans-unit id="eJG0z6e" resname="Liste de maison">
+        <source>Liste de maison</source>
+        <target>__Liste de maison</target>
+      </trans-unit>
+      <trans-unit id="eOeSABC" resname="Titre">
+        <source>Titre</source>
+        <target>__Titre</target>
+      </trans-unit>
+      <trans-unit id="CQX39ZA" resname="Surface">
+        <source>Surface</source>
+        <target>__Surface</target>
+      </trans-unit>
+      <trans-unit id="3QXQ4kf" resname="Pieces">
+        <source>Pieces</source>
+        <target>__Pieces</target>
+      </trans-unit>
+      <trans-unit id="bXY1IWQ" resname="Chambres">
+        <source>Chambres</source>
+        <target>__Chambres</target>
+      </trans-unit>
+      <trans-unit id="VMMk9sE" resname="Prix">
+        <source>Prix</source>
+        <target>__Prix</target>
+      </trans-unit>
+      <trans-unit id="yxHL7lT" resname="Ajouter une maison">
+        <source>Ajouter une maison</source>
+        <target>__Ajouter une maison</target>
+      </trans-unit>
+      <trans-unit id="IgoK0xj" resname="les liens">
+        <source>les liens</source>
+        <target>__les liens</target>
+      </trans-unit>
+      <trans-unit id="7kZagBc" resname="Acceuil">
+        <source>Acceuil</source>
+        <target>__Acceuil</target>
+      </trans-unit>
+      <trans-unit id="ft.rUIK" resname="déconnexion">
+        <source>déconnexion</source>
+        <target>__déconnexion</target>
+      </trans-unit>
+      <trans-unit id="tUKhz_F" resname="connexion">
+        <source>connexion</source>
+        <target>__connexion</target>
+      </trans-unit>
+      <trans-unit id="weYzfFG" resname="Coordonnes">
+        <source>Coordonnes</source>
+        <target>__Coordonnes</target>
+      </trans-unit>
+      <trans-unit id="7BmqfxC" resname="Immobilier">
+        <source>Immobilier</source>
+        <target>__Immobilier</target>
+      </trans-unit>
+      <trans-unit id="VRVzmgL" resname="espace administrateur">
+        <source>espace administrateur</source>
+        <target>__espace administrateur</target>
+      </trans-unit>
+      <trans-unit id="AiWFx0h" resname="Bienvenue sur l'espace administrateur de Subl'IMMO">
+        <source>Bienvenue sur l'espace administrateur de Subl'IMMO</source>
+        <target>__Bienvenue sur l'espace administrateur de Subl'IMMO</target>
+      </trans-unit>
+      <trans-unit id="9CKBwJl" resname="Accueil Admin">
+        <source>Accueil Admin</source>
+        <target>__Accueil Admin</target>
+      </trans-unit>
+      <trans-unit id=".9c9a66" resname="maison">
+        <source>maison</source>
+        <target>__maison</target>
+      </trans-unit>
+      <trans-unit id="5Fnwsez" resname="Propietaire">
+        <source>Propietaire</source>
+        <target>__Propietaire</target>
+      </trans-unit>
+      <trans-unit id="SXQWHdh" resname="Quitter">
+        <source>Quitter</source>
+        <target>__Quitter</target>
+      </trans-unit>
+      <trans-unit id="wPEuQFY" resname="une erreur est survenue">
+        <source>une erreur est survenue</source>
+        <target>__une erreur est survenue</target>
+      </trans-unit>
+      <trans-unit id="JhoPtsp" resname="la page demander n'existe pas">
+        <source>la page demander n'existe pas</source>
+        <target>__la page demander n'existe pas</target>
+      </trans-unit>
+      <trans-unit id="HDFbpuW" resname="Retour a l'">
+        <source>Retour a l'</source>
+        <target>__Retour a l'</target>
+      </trans-unit>
+      <trans-unit id="IjtwDsN" resname="acceuil">
+        <source>acceuil</source>
+        <target>__acceuil</target>
+      </trans-unit>
+      <trans-unit id="z7GsDIB" resname="Inscription">
+        <source>Inscription</source>
+        <target>__Inscription</target>
+      </trans-unit>
+      <trans-unit id="h2RaI5l" resname="vous possedez deja un compte">
+        <source>vous possedez deja un compte</source>
+        <target>__vous possedez deja un compte</target>
+      </trans-unit>
+      <trans-unit id="bnc4Ibo" resname="vous etes connecté en tant que">
+        <source>vous etes connecté en tant que</source>
+        <target>__vous etes connecté en tant que</target>
+      </trans-unit>
+      <trans-unit id="SNitTy8" resname="Se Connecter">
+        <source>Se Connecter</source>
+        <target>__Se Connecter</target>
+      </trans-unit>
+      <trans-unit id="ueUODot" resname="mot de passe">
+        <source>mot de passe</source>
+        <target>__mot de passe</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

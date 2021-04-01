@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-weight: lighter;
+
+}
+
+
+
+nav li {
+    margin: 1rem;
+    color: #fff;
+}
+nav li i {
+    padding: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+}
+nav a:hover{
+    color: #bbb;
+}
+
+
+table img {
+    max-width: 150px;
+    height: 120px;
+}
+
+/* *****************   FOOTER  *********************       */
+
+footer{
+    position: fixed;
+    padding: 1rem;
+    bottom: 0;
+    
+}
+footer p {
+    font-size: 0.75rem;
+}
+

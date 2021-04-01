@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-weight: lighter;
+
+}
+
+
+/*  ***********HOME-HEADER  *******************   */
+
+#header{
+    width: 100%;
+    height: 70vh;
+    
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+#header h1,
+#header h2{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    font-weight: lighter;
+}
+#header h2 {
+    top: 90%;
+    
+}
+
+
+    .card-img-top {
+        width: 100%;
+        height: 20vw;
+        object-fit: cover;
+    }
+    
+   
+
+
+
+/*  ***********FOOTER *******************   */
+ 
+
+.copyright {
+    font-size: 0.75em;
+}
+

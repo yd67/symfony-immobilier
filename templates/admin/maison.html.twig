@@ -1,0 +1,50 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}{% trans %} Maison {% endtrans %}{% endblock %}
+
+{% block body %}
+     <h2>{% trans %}Liste de maison{% endtrans %}</h2>
+
+     <table class="table table-bordered table-hover table-sm table-dark table-striped text-center
+     ">
+         <thead>
+             <tr>
+                 <th>n°</th>
+                 <th>{% trans %}Titre{% endtrans %}</th>
+                 <th>Description</th>
+                 <th>{% trans %}Surface {% endtrans %}</th>
+                 <th>{% trans %}Pieces{% endtrans %}</th>
+                 <th>{% trans %}Chambres{% endtrans %}</th>
+                 <th>{% trans %}Prix{% endtrans %}</th>
+                 <th>images 1</th>
+                 <th>images 2</th>
+                 <th>images 3</th>
+                 <th>Action</th>
+             </tr>
+         </thead>
+         <body>
+
+            {% for maison in maisons %}
+             <tr>
+                 <td> {{loop.index}} </td>
+                 <td>{{maison.title}}</td>
+                 <td>{{maison.description}}</td>
+                 <td> {{maison.surface}} </td>
+                 <td>{{maison.rooms}}</td>
+                 <td>{{maison.bedrooms}}</td>
+                 <td>{{maison.price}}</td>
+                 <td>  <img class="img-admin" src=" {{ asset('img/maison/') ~ maison.img1}} " alt=""></td>
+                 <td>{{maison.img2}}</td>
+                 <td>{{maison.img3}}</td>
+                 <td>
+                     <a href=" {{path('maison_update', {'id':maison.id} )}} "> <i class="fas fa-pen-square"></i> </a>  
+                     <a href=" {{ path('maison_delete', {'id':maison.id} ) }} "> <i class=" fas fa-trash-alt"></i> </a>  </td>
+             </tr>
+             {% endfor %} 
+         </body>
+     </table>
+      <div class="text-right">
+          <a href=" {{path('maison_create')}} " class="btn btn-outline-dark"> {% trans %}Ajouter une maison {% endtrans %}</a>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+<title>Inscription</title>
+
+{% block stylesheets %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+{% endblock stylesheets %}
+
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <header class="container-fluid bg-light ">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>{% trans %}Inscription{% endtrans %}</h1>
+            </div>
+        </div>
+        
+
+    </header>
+
+    <main class="container-fluid p-5" >
+    
+            {% for flashError in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+        {% endfor %}
+
+      <div class="col-6 offset-4">
+            {{ form_start(registrationForm) }}
+                {{ form_row(registrationForm.email) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+                {{ form_row(registrationForm.agreeTerms) }}
+
+               <button type="submit" class="btn btn-primary">S'inscrire</button>
+               {{ form_end(registrationForm) }}
+
+
+                <div class="">
+                    <p> <small>{% trans %}vous possedez deja un compte{% endtrans %} </small> <a class="text-center" href=" {{path('app_login') }} "> se connecter </a> </p>
+                </div>
+     </div>
+
+</main>
+
+
+<footer class="container-fluid bg-light">
+    <div class="row text-center p-5">
+        <div class="col-4">
+            <h4>les liens</h4>
+            <div class="dropdown-divider"></div>
+            <ul>
+                <li><a href=" {{path('home')}} ">{% trans %}Acceuil{% endtrans %}</a></li>
+                <li><a href=" {{path('admin')}} ">Admin</a></li>
+                <li><a href="{{path('contact')}}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="col-4 my-auto"><img class="w-100" src=" {{asset('img/footer.png')}} " alt=""></div>
+        <div class="col-4 my-auto">
+            <h4>{% trans %}Coordonnes{% endtrans %}</h4>
+            <div class="dropdown-divider"></div>
+            <p> 15 Avenu charle mortais</p>
+            <p>67000</p>
+            <p>07.34.56.86.38</p>
+            <p>adrss67@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="row copyright">
+        <div class="col-12 text-center">
+            <p>Copyright 2020 - Darius Yvens </p>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
